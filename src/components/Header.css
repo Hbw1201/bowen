@@ -1,4 +1,4 @@
-
+/* 顶部导航栏 */
 .header {
     display: flex;
     justify-content: space-between;
@@ -6,38 +6,109 @@
     padding: 1rem 2rem;
     background: linear-gradient(to right, #00c6ff, #0072ff);
     color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
+/* Logo头像 */
+.logo img {
+    display: block;
 }
 
+/* 移动端菜单按钮 */
 .menu-toggle {
     display: none;
     background: none;
     border: none;
     font-size: 2rem;
     color: white;
+    cursor: pointer;
 }
 
+/* 主导航菜单 */
 .nav {
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 .nav-item {
     text-decoration: none;
     color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
+    font-weight: bold;
     transition: background 0.3s ease;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
 }
 
 .nav-item:hover {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
+/* 🌐 语言下拉菜单 */
+.lang-dropdown {
+    position: relative;
+    margin-left: 1.5rem;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    font-size: 1rem;
+}
+
+.current-lang {
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    transition: background 0.2s ease;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.current-lang:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* ✅ 默认隐藏 + 动画 */
+.lang-options {
+    position: absolute;
+    top: 110%;
+    right: 0;
+    background-color: white;
+    color: #333;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    overflow: hidden;
+    min-width: 100px;
+    display: flex;
+    flex-direction: column;
+
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+/* ✅ 显示时渐入&滑动 */
+.lang-options.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+/* 下拉链接样式 */
+.lang-link {
+    color: #333;
+    text-decoration: none;
+    padding: 0.6rem 1rem;
+    font-weight: 500;
+    transition: background 0.2s ease;
+}
+
+.lang-link:hover {
+    background-color: #f0f0f0;
+}
+
+/* 📱 响应式样式 */
 @media (max-width: 768px) {
     .menu-toggle {
         display: block;
@@ -56,5 +127,9 @@
 
     .nav.open {
         display: flex;
+    }
+
+    .lang-dropdown {
+        margin-top: 0.5rem;
     }
 }
