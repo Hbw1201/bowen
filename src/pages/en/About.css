@@ -1,0 +1,52 @@
+/* about的外观 */
+.about-section {
+    margin: 0;
+    padding: 0 2rem 4rem;
+    background: #f9f9f9;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* 卡片网格布局 */
+.qa-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    width: 100%;
+    margin-top: 0; /* 避免额外顶距 */
+}
+
+/* 每张卡片 */
+.qa-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.qa-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* 标题（问题） */
+.qa-card h3 {
+    color: #0072ff;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* 回答文本 */
+.qa-card p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin: 0;
+}

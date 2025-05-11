@@ -1,0 +1,91 @@
+/* 整体项目区域 */
+.projects-section {
+    padding: 4rem 2rem;
+    background: #f5f8fc;
+    min-height: 100vh;
+    text-align: center;
+    color: #333;
+}
+
+/* 标题样式 */
+.projects-section h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #0072ff;
+}
+
+/* 单列卡片布局容器 */
+.projects-column {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 800px;
+    margin: auto;
+}
+
+/* 卡片样式 */
+.project-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+    position: relative;
+    padding-bottom: 4rem; /* 留空按钮区域 */
+    text-align: left;
+}
+
+/* 卡片 hover 动效 */
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+/* 项目标题 */
+.project-card h3 {
+    font-size: 1.4rem;
+    color: #222;
+    margin-bottom: 1rem;
+}
+
+/* 项目简介 */
+.project-card p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+/* 技术标签区域 */
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+/* 单个标签 */
+.tag {
+    background: #0072ff;
+    color: white;
+    padding: 0.35rem 0.8rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    white-space: nowrap;
+}
+
+/* “更多细节”按钮 */
+.detail-button {
+    position: absolute;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    background-color: #0072ff;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: background-color 0.3s;
+}
+
+.detail-button:hover {
+    background-color: #005edb;
+}

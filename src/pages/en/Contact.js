@@ -1,11 +1,29 @@
+import React from 'react';
+import './Contact.css';
+import { motion } from 'framer-motion';
+import { FaEnvelope, FaPhone } from 'react-icons/fa';
+
 export default function Contact() {
     return (
-        <section style={{ padding: '2rem' }}>
-            <h1>Contact Me</h1>
-            <p>
-                Feel free to reach out to me if you have any questions, collaboration ideas, or just want to say hello.
-            </p>
-            <p>Email: hanbowen@example.com</p>
-        </section>
+        <motion.section
+            className="contact-section"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+        >
+            <h1 className="contact-title">Contact</h1>
+            <p className="contact-subtitle">Feel free to reach out to me!</p>
+
+            <div className="contact-methods">
+                <div className="contact-card">
+                    <FaEnvelope className="contact-icon" />
+                    <span>hanbowen@student.usm.my</span>
+                </div>
+                <div className="contact-card">
+                    <FaPhone className="contact-icon" />
+                    <span>Phone / WhatsApp (+60)0111 076 8885</span>
+                </div>
+            </div>
+        </motion.section>
     );
 }

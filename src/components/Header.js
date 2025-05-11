@@ -1,5 +1,3 @@
-// ✅ Header.js 完整版（修复语言下拉异常定位）
-
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './Header.css';
@@ -9,15 +7,17 @@ export default function Header() {
     const [langMenuOpen, setLangMenuOpen] = useState(false);
     const location = useLocation();
 
-    const currentLang = location.pathname.startsWith('/zh')
-        ? '中文'
-        : location.pathname.startsWith('/ms')
-            ? 'BM'
-            : 'EN';
+    const pathname = location.pathname;
+    const currentLangPath = pathname.startsWith('/zh')
+        ? 'zh'
+        : pathname.startsWith('/ms')
+            ? 'ms'
+            : 'en';
+
+    const currentLang = currentLangPath === 'zh' ? '中文' : currentLangPath === 'ms' ? 'BM' : 'EN';
 
     return (
         <header className="header">
-            {/* Logo avatar */}
             <div className="logo">
                 <img
                     src="/images/avatar.jpg"
@@ -31,18 +31,15 @@ export default function Header() {
                 />
             </div>
 
-            {/* Mobile menu button */}
             <button className="menu-toggle" onClick={() => setIsOpen(!isOpen)}>☰</button>
 
-            {/* Navigation menu */}
             <nav className={`nav ${isOpen ? 'open' : ''}`}>
-                <Link to="/" className="nav-item">Home</Link>
-                <Link to="/about" className="nav-item">About</Link>
-                <Link to="/projects" className="nav-item">Projects</Link>
-                <Link to="/contact" className="nav-item">Contact</Link>
+                <Link to={`/${currentLangPath}`} className="nav-item">Home</Link>
+                <Link to={`/${currentLangPath}/about`} className="nav-item">About</Link>
+                <Link to={`/${currentLangPath}/projects`} className="nav-item">Projects</Link>
+                <Link to={`/${currentLangPath}/contact`} className="nav-item">Contact</Link>
             </nav>
 
-            {/* Language switcher with animation and position fix */}
             <div
                 className="lang-dropdown"
                 onClick={() => setLangMenuOpen(!langMenuOpen)}
