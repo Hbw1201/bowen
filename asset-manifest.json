@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/bowen/static/css/main.aac16a6a.css",
+    "main.js": "/bowen/static/js/main.39083f29.js",
+    "index.html": "/bowen/index.html",
+    "main.aac16a6a.css.map": "/bowen/static/css/main.aac16a6a.css.map",
+    "main.39083f29.js.map": "/bowen/static/js/main.39083f29.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.aac16a6a.css",
+    "static/js/main.39083f29.js"
+  ]
+}
