@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/bowen/static/css/main.aac16a6a.css",
-    "main.js": "/bowen/static/js/main.51df90c7.js",
+    "main.js": "/bowen/static/js/main.2a64b6a2.js",
     "index.html": "/bowen/index.html",
     "main.aac16a6a.css.map": "/bowen/static/css/main.aac16a6a.css.map",
-    "main.51df90c7.js.map": "/bowen/static/js/main.51df90c7.js.map"
+    "main.2a64b6a2.js.map": "/bowen/static/js/main.2a64b6a2.js.map"
   },
   "entrypoints": [
     "static/css/main.aac16a6a.css",
-    "static/js/main.51df90c7.js"
+    "static/js/main.2a64b6a2.js"
   ]
 }
