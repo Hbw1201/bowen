@@ -35,7 +35,10 @@ export default function HeroSection() {
                     <p>{subtitle}</p>
                 </div>
                 <div className="hero-image">
-                    <img src="/images/image1.png" alt="developer illustration" />
+                    <img
+                        src={process.env.PUBLIC_URL + '/images/image1.png'}
+                        alt="developer illustration"
+                    />
                 </div>
             </div>
         </section>
