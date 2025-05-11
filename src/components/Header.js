@@ -20,7 +20,7 @@ export default function Header() {
         <header className="header">
             <div className="logo">
                 <img
-                    src="/images/avatar.jpg"
+                    src={`${process.env.PUBLIC_URL}/images/avatar.jpg`}
                     alt="avatar"
                     style={{
                         width: '60px',
